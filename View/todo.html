@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+        <input id="todo-text" type="text" placeholder="Todo giriniz">
+        <button onclick="addTodo()">Ekle</button>
+        <div id="todo"></div>
+
+
+        <script>
+            function addTodo() {
+                const text = document.getElementById("todo-text").value
+
+                const pEl = document.createElement("p")
+                pEl.innerText = text
+
+                const todoDiv = document.getElementById("todo")
+
+                todoDiv.appendChild(pEl)
+
+                console.log(text);
+            }
+        </script>
+    </body>
+</html>
